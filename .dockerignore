@@ -1,0 +1,5 @@
+data/chroma_db
+*.pkl
+*.ipynb
+__pycache__/
+.git

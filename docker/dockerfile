@@ -1,0 +1,17 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Copie des requirements et installation
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copie du code source et des modèles entraînés
+COPY src/ ./src/
+
+
+# Variables d'environnement pour ChromaDB
+ENV CHROMA_DB_PATH="/app/data/chroma_db"
+
+# Commande par défaut (exécution du script principal)
+CMD ["python", "src/main.py"]
