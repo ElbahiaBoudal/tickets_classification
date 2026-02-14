@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
       - name: ml-pipeline
-        image: ton-repo/it-support-nlp:latest
+        image: docker-ml-pipeline:latest
         volumeMounts:
         - name: data-storage
           mountPath: /app/data
