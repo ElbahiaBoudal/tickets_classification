@@ -7,7 +7,6 @@ from sklearn.preprocessing import normalize
 
 def run_pipeline():
     print("Démarrage du pipeline Batch...")
-
     # 1. Chargement des données (Volume monté dans Docker)
     data_path = "/app/data/processed/tickets_clean.csv"
     if not os.path.exists(data_path):
@@ -15,7 +14,6 @@ def run_pipeline():
         return
 
     df = pd.read_csv(data_path)
-
     # 2. Chargement du modèle d'embedding
     print("Génération des embeddings...")
     model = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')
@@ -39,3 +37,4 @@ def run_pipeline():
 
 if __name__ == "__main__":
     run_pipeline()
+
