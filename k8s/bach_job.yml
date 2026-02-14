@@ -8,6 +8,7 @@ spec:
       containers:
       - name: ml-pipeline
         image: docker-ml-pipeline:latest
+        imagePullPolicy: IfNotPresent
         volumeMounts:
         - name: data-storage
           mountPath: /app/data
