@@ -4,6 +4,7 @@ import joblib
 from sentence_transformers import SentenceTransformer
 from sklearn.preprocessing import normalize
 
+
 def run_pipeline():
     print("Démarrage du pipeline Batch...")
     
@@ -35,5 +36,8 @@ def run_pipeline():
     df.to_csv(output_path, index=False)
     print(f"Terminé ! Résultats sauvegardés dans {output_path}")
 
+
 if __name__ == "__main__":
     run_pipeline()
+
+    
